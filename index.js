@@ -16,7 +16,6 @@ var args = process.argv.slice(2);
     if (!status) {
         console.log("Fix Mode enabling error");
         console.log("Please, move this file to root The Guild 2 Renaissance directory and run again");
-
     }
 
     console.log("Fix Mode successfully enabled");
@@ -71,7 +70,7 @@ async function enableFixMode() {
     }
 }
 
-async function () {
+async function disableFixMode() {
     try {
         const raw_config = await readFile(config_file_path, 'utf-8');
         const config = ini.parse(raw_config);
